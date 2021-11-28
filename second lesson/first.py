@@ -6,3 +6,4 @@ new_list = ['Машина', False, 5, 10.34, [1, 2, 3], (1, 2, 3), {1, 2, 3}, 5 
 
 for el in new_list:
     print(type(el))
+    
