@@ -15,3 +15,4 @@ elif month in [6, 7, 8]:
 elif month in [9, 10, 11]:
     print(f'{seasons_dict[4]}! Я тоже люблю {seasons_list[3]}.')
 else: print("Ой, я не знаю такого месяца!")
+    
