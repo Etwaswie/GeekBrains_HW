@@ -9,3 +9,4 @@ def division(first_num, second_num):
 
 
 print(division(int(input("Введите делимое: ")), int(input("Введите делитель: "))))
+
