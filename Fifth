@@ -1,0 +1,20 @@
+def my_summator():
+     sum = 0
+     exit = 1
+     while exit:
+         numbers = input('Введите числа для суммирования или Q для выхода: ').split()
+
+         result = 0
+
+         for number in range(len(numbers)):
+             if numbers[number] == 'q' or numbers[number] == 'Q':
+                 exit = 0 
+                 break
+             else:
+                 result += int(numbers[number])
+         sum += result
+         print(f'Сумма равна {sum}')
+     print(f'Конечная сумма {sum}')
+
+
+ my_summator()
