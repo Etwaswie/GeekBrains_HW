@@ -13,3 +13,4 @@ user_info(
     email = input('Почта: '),
     phone = input('Телефон: '),
 )
+
