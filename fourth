@@ -3,11 +3,11 @@
 
 
 
-def stepen_1(x, y):
+def stepen_1(x: int, y: int):
     return x ** y
 
 
-def stepen_2(x, y):
+def stepen_2(x: int, y: int):
     count = 1
     result = x
 
@@ -16,12 +16,14 @@ def stepen_2(x, y):
         count += 1
     return 1 / result
 
-def isint(s):
+
+def isint(num):
     try:
-        int(s)
+        int(num)
         return True
     except ValueError:
         return False
+
 
 x = int(input("Введите число, которое хотите возвести в степень: "))
 y = int(input("Введите целую отрицательную степень: "))
@@ -30,5 +32,5 @@ if isint(y) and y < 0:
     print(f'Возведение встроенной функцией: {stepen_1(x, y)}')
     print(f'Возведение новой функцией: {stepen_2(x, y)}')
 else:
-        print("Введенное число не целое или не отрицательное!")
+    print("Введенное число не целое или не отрицательное!")
         
