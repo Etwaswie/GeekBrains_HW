@@ -3,21 +3,30 @@
 # выполнение программы завершается. Если специальный символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной ранее сумме и после 
 # этого завершить программу.
 
+import sys
+
+
 def my_summator():
     sum = 0
     exit = 1
+    count = 0
+
     while exit:
         numbers = input('Введите числа для суммирования или Q для выхода: ').split()
         result = 0
 
         for number in range(len(numbers)):
-            if len(numbers) == 1 and (numbers[0] == 'q' or numbers[0] == 'Q'):
+            if len(numbers) == 1 and (numbers[0] == 'q' or numbers[0] == 'Q'): # тут если просто введен один элемент "q", то выход
                 exit = 0
                 print("Выход из программы.")
                 break
-            elif numbers[number].isalpha():
+            elif numbers[number].isalpha(): # а если введена буква, отличная от q, или другие буквы, то предупреждение. 3 предупреждения и бан
                 print("Вы ввели не число!")
-                break
+                count += 1
+
+                if count == 3:
+                    print("Не стоило баловаться сумматором! ψ(▼へ▼メ)～")
+                    sys.exit()
             else:
                 result += int(numbers[number])
         sum += result
