@@ -35,3 +35,4 @@ with open('5.7.txt', encoding='utf-8') as file:
 
 with open('5.7.json', 'w+') as file_1:
     json.dump(list, file_1)
+    
